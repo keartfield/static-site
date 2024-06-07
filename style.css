@@ -1,0 +1,151 @@
+:root {
+  --font-family: Hiragino Sans, ヒラギノ角ゴシック;
+  --text-color-black: #000000;
+  --text-color-gray: #7c7c7b;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+html {
+  background-color: #f3f3f1;
+}
+
+body {
+  margin: auto;
+  max-width: 900px;
+  font-family: var(--font-family);
+}
+
+#wrapper {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 10;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+
+header h1 #subtitle {
+  padding: 0 20px;
+  font-weight: 100;
+  color: var(--text-color-gray);
+}
+
+header a {
+  width: 26px;
+  height: 26px;
+}
+
+header a img {
+  width: 26px;
+  filter: invert(90%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(93%); 
+}
+
+header a img:hover {
+  filter: invert(80%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(93%); 
+  transition: all .5s cubic-bezier(.51, 0, 0, 1);
+}
+
+main {
+  margin-top: clamp(10rem, calc(100vw / 2), 30rem);
+  padding: 14px 24px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  margin-bottom: 20px;
+}
+
+.sticky {
+  position: sticky;
+  align-self: start;
+  top: 76px;
+  margin-right: 14px;
+  margin-bottom: 16px;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--text-color-gray);
+  text-align: right;
+}
+
+.contents {
+  padding: 3px 0 20px 7px;
+  line-height: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--text-color-black);
+}
+
+.description {
+  font-size: 12px;
+  font-weight: 100;
+  color: var(--text-color-gray);
+}
+
+button {
+  margin-left: 2px;
+  margin-right: 18px;
+  padding: 6px 10px;
+  z-index: 1;
+  background: #e7e7e7;
+  border: 1px solid #b5b5b5;
+  outline-offset: -4px;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: var(--text-color-black);
+  transition: all .5s cubic-bezier(.51,0,0,1);
+}
+
+button a {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  color: var(--text-color-gray); 
+}
+
+button:hover a {
+  color: #f3f3f1;
+  transition: all .5s cubic-bezier(.51,0,0,1);
+}
+
+footer {
+  padding-top: 240px;
+}
+
+footer p {
+  position: sticky;
+  top: 76px;
+  font-size: 12px;
+  font-weight: 100;
+  color: var(--text-color-gray);
+}
+
+footer div {
+  height: 100vh;
+}
